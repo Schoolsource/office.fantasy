@@ -1,0 +1,162 @@
+/*          
+          .o88
+          "888
+ .oooo.    888  .oo.    ..o88.     ooo. .oo.    .oooo`88
+d88' `8b   88bP"Y88b   888P"Y88b  "888P"Y88b   888' `88b 
+888        88b   888   888   888   888   888   888   888
+888. .88   888   888   888   888   888   888   888. .880
+ 8`bo8P'  o888o o888o   8`bod8P'  o888o o888o   .oooo88o
+                                                     088`
+                                                    .o88
+*/
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: 50% 50% no-repeat;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box
+}
+:focus {
+    outline: 0
+}
+b,
+b *,
+strong,
+strong * {
+    font-weight: 600
+}
+ol,
+ul {
+    list-style: none
+}
+.codepen body {
+    margin: 10px 0 0
+}
+.codepen body textarea {
+    display: none
+}
+.mce-container textarea {
+    display: inline-block !important
+}
+.mce-content-body {
+    line-height: 1.58;
+    font-size: 18px;
+    color: #626262;
+    padding: 0 25px 25px
+}
+.mce-content-body h1,
+.mce-content-body h2,
+.mce-content-body h3,
+.mce-content-body h4,
+.mce-content-body h5,
+.mce-content-body h6 {
+    font-weight: 500;
+    margin: 25px 0 15px
+}
+.mce-content-body * {
+    background-position: initial
+}
+.mce-content-body .img {
+    width: 100% !important;
+    height: auto !important
+}
+.mce-content-body a[href] {
+    color: #00f;
+    text-decoration: none
+}
+.mce-content-body a[href]:hover {
+    text-decoration: underline
+}
+.mce-content-body h1 {
+    font-size: 34px
+}
+.mce-content-body h2 {
+    font-size: 30px
+}
+.mce-content-body h3 {
+    font-size: 26px
+}
+.mce-content-body h4 {
+    font-size: 22px
+}
+.mce-content-body h5 {
+    font-size: 18px
+}
+.mce-content-body h6 {
+    font-size: 14px
+}
+.mce-content-body p {
+    margin: 25px 0
+}
+.mce-content-body ol,
+.mce-content-body ul {
+    margin-left: 15px;
+    list-style-position: outside;
+    margin-bottom: 20px
+}
+.mce-content-body ol li,
+.mce-content-body ul li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #626262
+}
+.mce-content-body ul {
+    list-style-type: disc
+}
+.mce-content-body ol {
+    list-style-type: decimal
+}
+.mce-content-body a[href] {
+    text-decoration: underline
+}
+.mce-content-body table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    margin: 25px 0
+}
+.mce-content-body table td {
+    border: 1px solid #aaa;
+    vertical-align: top
+}
+.mce-content-body table td>h1:first-child,
+.mce-content-body table td>h2:first-child,
+.mce-content-body table td>h3:first-child,
+.mce-content-body table td>p:first-child {
+    margin-top: 0
+}
+.mce-content-body table td>h1:last-child,
+.mce-content-body table td>h2:last-child,
+.mce-content-body table td>h3:last-child,
+.mce-content-body table td>p:last-child {
+    margin-bottom: 0
+}
+.mce-content-body table caption,
+.mce-content-body table td,
+.mce-content-body table th {
+    padding: 15px 20px;
+    font: inherit
+}
+.mce-content-body table th {
+    font-weight: 400;
+    color: #6e6e6e;
+    background-position: 100% 100%;
+    background-size: 2px 10px;
+    background-repeat: no-repeat
+}
+.mce-content-body table th:last-child {
+    background: 0
+}
+.mce-content-body hr {
+    border-top: 2px solid #BBB
+}
+.mce-content-body blockquote {
+    border-left: 5px solid rgba(255, 59, 59, 0.3);
+    margin: 28px 0;
+    padding: 1px 20px;
+    color: #fff;
+    background-color: #ff7676
+}

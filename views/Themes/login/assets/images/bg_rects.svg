@@ -1,0 +1,49 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="864" height="430" viewBox="0 0 864 430">
+  <title>bg_rects</title>
+  <g opacity="0.05">
+    <polygon points="756 86 810 0 702 0 756 86" opacity="0.92" />
+    <polygon points="756 258 810 172 756 86 702 172 756 258" opacity="0.4" />
+    <polygon points="810 172 864 86 810 0 756 86 810 172" opacity="0.63" />
+    <polygon points="810 344 864 258 810 172 756 258 810 344" opacity="0.16" />
+    <polygon points="324 86 378 0 270 0 324 86"/>
+    <polygon points="324 258 378 172 324 86 270 172 324 258" opacity="0.3" />
+    <polygon points="378 172 432 86 378 0 324 86 378 172" opacity="0.73" />
+    <polygon points="378 344 432 258 378 172 324 258 378 344" opacity="0.16" />
+    <polygon points="540 86 594 0 486 0 540 86" opacity="0.8" />
+    <polygon points="540 258 594 172 540 86 486 172 540 258" opacity="0.4" />
+    <polygon points="594 172 648 86 594 0 540 86 594 172" opacity="0.56" />
+    <polygon points="594 344 648 258 594 172 540 258 594 344" opacity="0.16" />
+    <polygon points="108 86 162 0 54 0 108 86" opacity="0.84" />
+    <polygon points="108 258 162 172 108 86 54 172 108 258" opacity="0.48" />
+    <polygon points="162 172 216 86 162 0 108 86 162 172" opacity="0.68" />
+    <polygon points="162 344 216 258 162 172 108 258 162 344" opacity="0.16" />
+    <polygon points="648 86 702 0 594 0 648 86"/>
+    <polygon points="648 258 702 172 648 86 594 172 648 258" opacity="0.3" />
+    <polygon points="702 172 756 86 702 0 648 86 702 172" opacity="0.7" />
+    <polygon points="702 344 756 258 702 172 648 258 702 344" opacity="0.24" />
+    <polygon points="216 86 270 0 162 0 216 86"/>
+    <polygon points="216 258 270 172 216 86 162 172 216 258" opacity="0.44" />
+    <polygon points="270 172 324 86 270 0 216 86 270 172" opacity="0.6" />
+    <polygon points="270 344 324 258 270 172 216 258 270 344" opacity="0.2" />
+    <polygon points="432 86 486 0 378 0 432 86" opacity="0.9" />
+    <polygon points="432 258 486 172 432 86 378 172 432 258" opacity="0.46" />
+    <polygon points="486 172 540 86 486 0 432 86 486 172" opacity="0.68" />
+    <polygon points="486 344 540 258 486 172 432 258 486 344" opacity="0.12" />
+    <polygon points="0 86 54 0 0 0 0 86" opacity="0.96" />
+    <polygon points="0 258 54 172 0 86 0 258" opacity="0.48" />
+    <polygon points="756 430 810 344 756 258 702 344 756 430" opacity="0.08" />
+    <polygon points="324 430 378 344 324 258 270 344 324 430" opacity="0.08" />
+    <polygon points="540 430 594 344 540 258 486 344 540 430" opacity="0.08" />
+    <polygon points="108 430 162 344 108 258 54 344 108 430" opacity="0.08" />
+    <polygon points="648 430 702 344 648 258 594 344 648 430" opacity="0.04" />
+    <polygon points="216 430 270 344 216 258 162 344 216 430" opacity="0.04" />
+    <polygon points="432 430 486 344 432 258 378 344 432 430" opacity="0.08" />
+    <polygon points="0 430 54 344 0 258 0 430" opacity="0.08" />
+    <polygon points="54 172 108 86 54 0 0 86 54 172" opacity="0.64" />
+    <polygon points="54 344 108 258 54 172 0 258 54 344" opacity="0.12" />
+    <polygon points="864 86 810 0 864 0 864 86" opacity="0.96" />
+    <polygon points="864 258 810 172 864 86 864 258" opacity="0.48" />
+    <polygon points="864 430 810 344 864 258 864 430" opacity="0.08" />
+  </g>
+ 
+</svg>

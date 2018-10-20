@@ -1,0 +1,392 @@
+/* =========================================================
+          .o88
+          "888
+ .oooo.    888  .oo.    ..o88.     ooo. .oo.    .oooo`88
+d88' `8b   88bP"Y88b   888P"Y88b  "888P"Y88b   888' `88b 
+888        88b   888   888   888   888   888   888   888
+888. .88   888   888   888   888   888   888   888. .880
+ 8`bo8P'  o888o o888o   8`bod8P'  o888o o888o   .oooo88o
+                                                     088`
+                                                    .o88
+============================================================ */
+
+body {
+    background-color: #fff;
+    color: #000;
+    /*font-size: 13px*/
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%
+}
+
+h1,
+h2,
+h3 {
+    margin: 0
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%
+}
+
+h3 {
+    font-size: 140%
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both
+}
+
+.whitespace {
+    white-space: nowrap
+}
+
+.tac {
+    text-align: center
+}
+
+.tar {
+    text-align: right
+}
+
+.tal {
+    text-align: left
+}
+
+.tsw {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 1)
+}
+
+.ftu {
+    text-transform: uppercase
+}
+
+.ftl {
+    text-transform: lowercase
+}
+
+.lfloat {
+    float: left
+}
+
+.rfloat {
+    float: right
+}
+
+.nfloat {
+    float: none
+}
+
+
+.table-standard {}
+
+.table-standard th,
+.table-standard td {
+    padding: 3px 4px;
+    border: 1px solid #000;
+}
+
+.table-standard thead th {
+    color: #000;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.table-standard tr.price td.label {}
+
+.table-standard tr.total td.label,
+.table-standard tr .int {
+    text-align: right;
+}
+
+.table-standard tr.total td {
+    font-weight: bold;
+    font-size: 120%;
+    background-color: #f5f5f5
+}
+
+.table-standard tr .price,
+.table-standard tr .total {
+    width: 80px;
+    text-align: right;
+}
+
+.table-standard tr .tense {
+    background-color: #fafafa;
+}
+
+.table-standard tr .ID {
+    width: 20px;
+    text-align: center;
+    border-right-width: 0;
+}
+
+.table-standard tr .ID+.name {
+    border-left-width: 0;
+}
+
+.table-standard.border-black th,
+.table-standard.border-black td {
+    border-color: #000;
+}
+
+
+.tRep-masIncome {
+    background-color: #fff;
+    font-size: 12px;
+}
+
+.tRep-masIncome th,
+.tRep-masIncome td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 3px 4px
+}
+
+.tRep-masIncome thead th {
+    background-color: #f2f2f2;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+.tRep-masIncome tr.sum th{
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.tRep-masIncome .span{
+    height: 25px;
+}
+.tRep-masIncome .ID {
+    width: 20px;
+}
+.tRep-masIncome .no-boder{
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+.tRep-masIncome .blw2{
+    border-left-width: 2px;
+}
+.tRep-masIncome .btw2{
+    border-top-width: 2px;
+}
+.tRep-masIncome .brw2{
+    border-right-width: 2px;
+}
+.tRep-masIncome .tar{
+    text-align: right;
+}
+
+
+.tRep-masIncome .day {
+    width: 40px;
+}
+
+.tRep-masIncome .space {
+    width: 20px;
+}
+
+.tRep-masIncome .status {
+    width: 60px
+}
+
+.tRep-masIncome .name {
+    text-align: center;
+    width: 90px
+}
+
+.tRep-masIncome .noBorder {
+    border-width: 2px 0 0
+}
+
+
+.table-reports-receipt {
+    width: 100%;
+    background-color: #fff;
+}
+
+.table-reports-receipt td {
+    padding: 3px 4px
+}
+
+.table-reports-receipt .ID {
+    width: 20px;
+    text-align: right;
+}
+
+.table-reports-receipt .value {
+    width: 80px;
+    text-align: right;
+}
+
+.table-reports-receipt .subtotal td {
+    font-weight: bold;
+    text-align: right;
+}
+
+.table-reports-receipt td.subtotal {
+    border-bottom: 1px solid #000;
+}
+
+.table-reports-receipt .listbox td {
+    border: 1px solid #000;
+}
+
+.table-reports-receipt .listbox .ID {
+    border-left-width: 1px;
+    border-right-width: 0;
+}
+
+.table-reports-receipt .listbox .name {
+    border-right-width: 1px;
+    border-left-width: 0
+}
+
+.table-reports-receipt .listbox .value {
+    border-right-width: 1px;
+}
+
+.uls {
+    border-bottom: 1px solid #000;
+    text-decoration: underline;
+}
+
+.uld {
+    border-bottom: 3px double #000;
+    text-decoration: underline;
+}
+
+.total-partime {
+    text-decoration: none;
+    font-style: italic;
+}
+
+.total-revenu {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.fwb {
+    font-weight: bold;
+}
+
+.table-reports-receipt-p20 td,
+.table-reports-receipt-p20 th {
+    padding: 20px 4px
+}
+
+
+.tableDailyKeyin th,
+.tableDailyKeyin td {
+    padding: 10px 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tableDailyKeyin th {
+    border-bottom-width: 2px;
+}
+
+.tableDailyKeyin .bl {
+    border-left-width: 2px;
+}
+
+.table-akasuri {
+    width: 100%;
+}
+
+.table-akasuri th,
+.table-akasuri td {
+    border: 1px solid #000;
+    padding: 5px 4px;
+}
+
+.table-akasuri th {
+    white-space: nowrap;
+    background-color: #eee;
+    border-top-width: 2px;
+    border-bottom-width: 2px
+}
+
+.table-akasuri .name {
+    text-align: left;
+}
+
+.table-akasuri .date {
+    width: 60px;
+    text-align: center;
+}
+
+.table-akasuri .sum {
+    width: 60px;
+    text-align: right;
+}
+
+.table-akasuri .NO {
+    width: 30px;
+    text-align: center;
+}
+
+.table-akasuri .note {
+    width: 60px;
+}
+
+.table-akasuri .frist {
+    border-left-width: 2px
+}
+
+.table-akasuri .last {
+    border-right-width: 2px;
+}
+
+.uiListSalaryMassager{
+    border: 1px solid #000;
+}
+
+.uiListSalaryMassager .inner{
+    border: 1px solid #000;
+    height: 430px;
+    padding: 5px 10px;
+    width: 33.3333333%;
+
+}
+.uiListSalaryMassager table td{
+    vertical-align: top;
+    padding: 3px 4px;
+    font-size: 14pt;
+    white-space: nowrap;
+    /*font-size: 10pt;*/
+}
+.uiListSalaryMassager table td.number{
+    width: 20px;
+    padding-top: 6px;
+}
+.uiListSalaryMassager table td.price{
+    width: 30%;
+    text-align: right;
+}
+.uiListSalaryMassager table td.label{
+    width: 35%;
+    
+}
+.uiListSalaryMassager table td.solid{
+    border-bottom: 1px solid #000;
+}
+.uiListSalaryMassager table td.double{
+    border-bottom: 3px double #000;
+}
