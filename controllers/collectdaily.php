@@ -29,14 +29,31 @@ class Collectdaily extends Controller{
                 'year' => $year,
                 'sale' => $sale,
             );
-
+            
             $results = $this->model->collect_daily($options);
             $this->view->setData('results', $results);
             $render = 'dailycollect/lists/json';
+           
         }
-       
+        
         $this->view->render($render);
     
     }
+    // add list of collection daily
+    public function save($data=""){
+       if(empty($_POST)){
+           $this->error();
+       }
+      try {
+        $query = $this->model->save($_POST['input']);
+      }catch (Exception $e) {
+        $arr['error'] = $e->getMessage();
+    
+        }
+        $arr['message'] = 'Saved !';
+        $arr['url'] = 'refresh';
+        echo json_encode($arr);
+    }
+
 
 }

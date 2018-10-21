@@ -1,68 +1,28 @@
-<div id="mainContainer" class="report-main clearfix" data-plugins="main">
+
+
+<div id="mainContainer" class="report-main clearfix container" data-plugins="main">
     <div role="content">
         <div role="main" class="pal">
             <div class="uiBoxWhite pas pam">
                 <div class="clearfix">
-                    <div class="lfloat">
+                    <div class="lfloat" style="display:flex; padding-bottom:1rem;">
                         <h3 class="fwb"><i class="icon-ship"></i>Daily collect</h3>
+                        <h4 style="margin:.2rem 0 0 .5rem;"><?=$this->fn->q('time')->full(strtotime(date("Y-m-d")),true,true,false)?> </h4>
                     </div>
                 </div>
                 <div class="clearfix">
-                    <div class="lfloat" style="margin-left: 5mm;">
-                        <ul>
-                            <li class="js-control mtm">
-                                <label for="month" class="label">Month</label>
-                                <select class="inputtext" name="month" style="display:inline;">
-                                    <option value="" selected="1">- All -</option>
-                                    <?php
-                                    for ($i = 1; $i <= 12; ++$i) {
-                                        $sel = '';
-                                        // if( $i == date("n") ){
-                                        //  $sel = ' selected="1"';
-                                        // }
-                                        echo '<option'.$sel.' value="'.$i.'">'.$this->fn->q('time')->month($i, true, 'en').'</option>';
-                                    }
-                                    ?>
-                                </select>
-                                <label for="year" class="label mlm">Year</label>
-                                <select class="inputtext" name="year" style="display:inline;">
-                                    <option value="" selected="1">- All -</option>
-                                    <?php
-                                    $year = date('Y');
-                                    for ($i = 0; $i < 5; ++$i) {
-                                        $_year = $year - $i;
+                  
+                </div>
+                <div class="clearfix">
+                    <ul class="lfloat" ref="control">
+                    <li class="mt">
+                        <form class="js-submit-form form-insert" action="collectdaily/save" method="post">
+                            <input class="inputtext search-input" style="border-radius: .25rem" type="text" id="search-query" placeholder="<?="Enter billing id"?>" name="input" autocomplete="off">
+            
 
-                                        $sel = '';
-                                        // if( $_year == $year ){
-                                        //  $sel = ' selected="1"';
-                                        // }
-
-                                        echo '<option'.$sel.' value="'.$_year.'">'.$_year.'</option>';
-                                    }
-                                    ?>
-                                </select>
-
-                                <label class="label">Select sale</label>
-                                <select class="inputtext" name="sale" style="display:inline;">
-                                    <option value="">-</option>
-                                    <?php
-                                    foreach ($this->sales as $key => $value) {
-                                        echo '<option value="'.$value['code'].'">'.$value['name'].'</option>';
-                                    }
-                                    ?>
-								</select>
-								<label class="label">Bill On.</label>
-								<select class="inputtext" name="sale" style="display:inline;">
-                                    <option value="">-</option>
-                                    <?php
-                                    foreach ($this->sales as $key => $value) {
-                                        echo '<option value="'.$value['code'].'">'.$value['name'].'</option>';
-                                    }
-                                    ?>
-                            
-                            </li>
-                        </ul>
-                    </div>
+                        </form>
+                    </li>
+                </ul>
                 </div>
             </div>
             <div class="uiBoxWhite pas pam" style="margin-top: 2mm;">
@@ -72,6 +32,14 @@
     </div>
 </div>
 <script type="text/javascript">
+
+    var delay = (function(){
+    var timer = 0;
+    return function(callback, ms){
+        clearTimeout (timer);
+        timer = setTimeout(callback, ms);
+    };
+    })();
 
     $.fn.extend(
     {
@@ -83,9 +51,22 @@
             });
         }
     });
-
+    $("#table-lists").delegate('.js-auto-submit', 'keypress',function(e){
+            delay(function(){
+                
+                }, 1000 );
+    })
+    $('.form-search').submit(function(e){
+        e.preventDefault();
+        data = $(this).find('input[name="js-billing"]').val()
+        $.ajax({url: "collectdaily/save",data:{'input':data},method:'POST', success: function(res){
+           
+        }}).fail(function(err){
+            
+        });
+    })
     $('.js-control').loadMain();
-
+    
     $('.js-control').change(function(){
         var month = $(this).find('[name=month]').val();
         var year = $(this).find('[name=year]').val();

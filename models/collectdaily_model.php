@@ -6,33 +6,16 @@ class Collectdaily_Model extends Model{
         parent::__construct();
     }
 
+    private $_COLUM = "orders.id as order_id, orders.user_name, orders.ord_dateCreate as delivery_date, collection.created_sales as sale, collection.expected_amount as expected_amount, collection.created_At as due_date";
+    private $_TABLE = "collection LEFT JOIN orders ON collection.order_id = orders.id";
+    private $_WHERE = "collection.created_At = CURDATE()";
+
     public function collect_daily($options = array())
     {
-        $data = array();
-        $_data = array();
-        $w = '';
-        $w_arr = array();
-
-        if (!empty($options['sale'])) {
-            $w .= !empty($w) ? ' AND ' : '';
-            $w .= 'ord_sale_code=:sale';
-            $w_arr[':sale'] = $options['sale'];
-        }
-
-        if (!empty($options['month']) && !empty($options['year'])) {
-            $w .= !empty($w) ? ' AND ' : '';
-            $w .= 'ord_dateCreate LIKE :month';
-            $w_arr[':month'] = "{$options['year']}-{$options['month']}%";
-        }
-
-        if (!empty($options['process'])) {
-            $w .= !empty($w) ? ' AND ' : '';
-            $w .= 'ord_process=:process';
-            $w_arr[':process'] = $options['process'];
-        }
-
-        $w = !empty($w) ? "WHERE {$w}" : '';
-        $results = $this->db->select("SELECT orders.*, sales.sale_fullname FROM orders LEFT JOIN sales ON orders.ord_sale_code=sales.sale_code {$w} GROUP BY sales.sale_code, orders.id, orders.ord_dateCreate ORDER BY ord_dateCreate  DESC LIMIT 100", $w_arr);
+       
+        $results = $this->db->select("SELECT {$this->_COLUM} FROM {$this->_TABLE} WHERE {$this->_WHERE}");
+       
+    
         foreach ($results as $key => $value) {
             $data[$key] = $value;
             $data[$key]['pay'] = 0;
@@ -54,6 +37,21 @@ class Collectdaily_Model extends Model{
             $_data[] = $value;
         }
 
-        return $_data;
+        return $results;
+    }
+    public function save($data){
+        $results = $this->db->select("SELECT * FROM orders WHERE id = $data LIMIT 1 ");
+        if(empty($results)){
+            throw new Exception("Error not found you billing number");
+        }
+        $arr = array(
+                        'order_id'=>$data,
+                        'created_At'=>date('Y-m-d'),
+                        'expected_amount'=>$results[0]['ord_net_price'],
+                        'created_sales'=>$this->me['id']
+        );
+      
+          $respose = $this->db->insert("collection", $arr);
+      
     }
 } 
